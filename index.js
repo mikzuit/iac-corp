@@ -5,12 +5,12 @@ const moment = require("moment");
 const random = require("random");
 
 // Change the working directory to where your local repository is located
-const git = simpleGit("/home/mz/Workspace/iac-corp-2");
+const git = simpleGit("/home/mz/Workspace/iac-corp");
 
 const makeCommit = (n) => {
   if (n === 0) {
     // Push changes to the remote repository
-    git.push(["-u", "origin", "master"], (err, result) => {
+    git.push(["-u", "origin", "main"], (err, result) => {
       if (err) {
         console.error("Error pushing to remote:", err);
       } else {
@@ -39,7 +39,7 @@ const makeCommit = (n) => {
     git
       .add([FILE_PATH])
       .commit(DATE, { "--date": DATE })
-      .push(["-u", "origin", "master"], (err, result) => {
+      .push(["-u", "origin", "main"], (err, result) => {
         if (err) {
           console.error("Error pushing to remote:", err);
         } else {
