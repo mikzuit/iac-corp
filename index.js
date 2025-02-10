@@ -24,7 +24,7 @@ const makeCommit = (n) => {
   const y = random.int(0, 6);
   // Substrac 1 year to current year
   const DATE = moment()
-    .subtract(3, "y")
+    .subtract(5, "y")
     .add(1, "d")
     .add(x, "w")
     .add(y, "d")
